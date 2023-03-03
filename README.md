@@ -12,10 +12,13 @@ Do **not** add a dot to the extension, this happens automatically
 
 The default will be "passwords.txt", if nothing is supplied.
 
+# Current support of file types
+These files can have custom text in them, so they don't appear as 0kb files.
+- `.txt`
+
 # TODO
 Add to the README:
 - Show how a python file can forever be ran on Linux
 
 Add to the code:
 - A way for the user to see their files & if they are accessed in a remote / better way
-- A way for the user to add custom text (so the files don't appear empty)
