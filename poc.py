@@ -1,5 +1,5 @@
 from txt_helper import txt_function	
-from make_file import *
+from make_files import *
 
 # Take user input and set it to the filename variable
 filename = input("Enter the name of the file \nDefault is 'passwords' if no name is entered:")

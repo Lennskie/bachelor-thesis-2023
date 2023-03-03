@@ -1,8 +1,10 @@
 # Introduction
 This repo is made for my Bachelor Thesis of 2023.
-It includes a tool to make a new file with a custom name and extension and will forever check if the file has been accessed.
+This tool lets you create a new file that will have a listener on it to check if it has been accessed by someone.
 
-Ideally, you want to name it something the hacker might want to access like 'passwords.txt'.
+Ideally, you want to name it something the hacker might want to access like 'passwords.txt' (this is the default name, explained below).
+
+This project has been made it Python 3.10 and will only work in versions matching or higher, because the `match` function has only been introduced in 3.10.
 
 # How to use and usecases
 

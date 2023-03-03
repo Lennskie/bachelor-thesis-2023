@@ -1,4 +1,4 @@
-from make_file import *
+from make_files import *
 import random
 
 def txt_function(filename, extension):
