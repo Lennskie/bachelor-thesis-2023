@@ -11,7 +11,11 @@ def make_file_default(filename, extension, path):
         os.remove(filename)
         print("The file " + filename + " exists, deleting it and making a new one")
     else:
-        print("The file " + filename + " does not exist")
+        print("The file " + filename + " does not exist, making a new one")
+
+    # make a file with the os package
+    with open(filename, "w") as file:
+        file.close()
 
     access_checker(filename)
 
@@ -25,9 +29,7 @@ def make_file_txt(filename, extension, path, user_input):
         os.remove(filename)
         print("The file " + filename + " exists, deleting it and making a new one")
     else:
-        print("The file " + filename + " does not exist")
-
-    #This is a copy of the previous code because the code calls the access_checker fucntion and thus cannot be re-used.
+        print("The file " + filename + " does not exist, making a new one")
 
 
     # write the user input to the file
