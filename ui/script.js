@@ -2,6 +2,8 @@
 
 
 document.addEventListener('DOMContentLoaded', init);
+
+
 function init(){
     addList();
 }
@@ -13,11 +15,14 @@ function addList(){
     .then(data => {
         const dataArray = Object.values(data); // convert object to array
         for(let i = 0; i < dataArray.length; i++) {
-            document.querySelector('ul').innerHTML += `<li>Dir: ${dataArray[i].path} ; last opened at: ${dataArray[i].last_access_time} & opened_status: ${dataArray[i].accessed}</li> <button>click</button>`
-            document.querySelectorAll('button')[i].addEventListener('click', () => {
-                console.log('clicked');
-            })
+            document.querySelector('ul').innerHTML += `<li>Dir: ${data[i].path} ; last opened at: ${data[i].last_access_time} & opened_status: ${data[i].accessed}</li> <button data-uuid=${data[i].uuid}>click</button>`
         }
     });
-    
+    addButtonListeners();
 }
+
+function addButtonListeners(){
+    let buttons = document.querySelectorAll('button')
+    buttons.forEach(button => { addEventListener('click', () => { console.log(button.dataset.uuid) }) })
+}
+
