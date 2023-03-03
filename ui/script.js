@@ -24,5 +24,6 @@ function addList(){
 function addButtonListeners(){
     let buttons = document.querySelectorAll('button')
     buttons.forEach(button => { addEventListener('click', () => { console.log(button.dataset.uuid) }) })
+//TODO: fix this
 }
 

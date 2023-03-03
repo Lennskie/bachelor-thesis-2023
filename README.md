@@ -41,3 +41,4 @@ Add to the README:
 Add to the code:
 - A way for the user to see their files & if they are accessed in a remote / better way
 - Make listeners so you can add more files and see which one changed.
+- Make working event listeners in the javascript code
