@@ -8,7 +8,9 @@ Ideally, you want to name it something the hacker might want to access like 'pas
 
 `python poc.py`
 It will ask for a filename and extension.
-The default will be "passwords.txt"
+Do **not** add a dot to the extension, this happens automatically
+
+The default will be "passwords.txt", if nothing is supplied.
 
 # TODO
 Add to the README:
@@ -16,4 +18,4 @@ Add to the README:
 
 Add to the code:
 - A way for the user to see their files & if they are accessed in a remote / better way
-- Add defaults if nothing is specified
+- A way for the user to add custom text (so the files don't appear empty)
