@@ -7,8 +7,8 @@ def make_json(filename, last_access_time, _uuid):
 
     # check at what the counter "i" is at
     if(os.path.exists("files.json")):
-        files_data= json.load(open("files.json"))
-        i = len(files_data)
+        data_file= json.load(open("files.json"))
+        i = len(data_file)
     # no need for an else, because the default value of i is 0
 
     # make a json file with the file data
@@ -24,10 +24,10 @@ def make_json(filename, last_access_time, _uuid):
     # check if files.json exists
     # if it does, add the new file to the json file
     if(os.path.exists("files.json")):
-        files_data = json.load(open("files.json")) 
-        files_data.update(_json)
+        data_file = json.load(open("files.json")) 
+        data_file.update(_json)
         with open("files.json", "w") as file:
-            file.write(str(json.dumps(files_data)))
+            file.write(str(json.dumps(data_file)))
             file.close()
     # if it doesn't, make a new json file
     else:

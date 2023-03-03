@@ -11,9 +11,13 @@ function addList(){
     fetch('../files.json')
     .then(response => response.json())
     .then(data => {
-        for (let i = 0; i < 5; i++) {
-            document.querySelector('ul').innerHTML += `<li>Dir: ${data[i].path} ; last opened at: ${data[i].last_access_time} & opened_status: ${data[i].accessed}</li>`
+        const dataArray = Object.values(data); // convert object to array
+        for(let i = 0; i < dataArray.length; i++) {
+            document.querySelector('ul').innerHTML += `<li>Dir: ${dataArray[i].path} ; last opened at: ${dataArray[i].last_access_time} & opened_status: ${dataArray[i].accessed}</li> <button>click</button>`
+            document.querySelectorAll('button')[i].addEventListener('click', () => {
+                console.log('clicked');
+            })
         }
     });
- 
+    
 }
