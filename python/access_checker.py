@@ -1,6 +1,7 @@
 import os
 import time
-from make_json import make_json
+import uuid
+from make_json import *
 
 
 def access_checker(filename):
@@ -9,7 +10,10 @@ def access_checker(filename):
     print("The last access time of " + filename + " is ")
     print(last_access_time)
 
-    make_json(filename, last_access_time)
+    #the UUID is needed here for the checker
+    _uuid = str(uuid.uuid4())
+
+    make_json(filename, last_access_time, _uuid)
 
     while True:
         # check the last access time of the file every 5 seconds
@@ -21,4 +25,5 @@ def access_checker(filename):
         # check if the file has been accessed by comparing the initial creation time to the current last accessed one.
         if(_last_access_time > last_access_time):
             print("The file has been accessed")
+            update_json(_uuid)
             break

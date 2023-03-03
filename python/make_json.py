@@ -1,13 +1,13 @@
-import uuid
 import json
 import os
 
-def make_json(filename, last_access_time):
+def make_json(filename, last_access_time, _uuid):
 
     _json = {
-                str(uuid.uuid4()): { 
+                _uuid: { 
                     "path": filename,
-                    "access_date": last_access_time
+                    "access_date": last_access_time,
+                    "accessed": False
                 }
             }
 
@@ -23,6 +23,9 @@ def make_json(filename, last_access_time):
             file.write(str(json.dumps(_json)))
             file.close()
 
-
-
-    
+def update_json(_uuid):
+    test = json.load(open("files.json"))
+    test[_uuid]["accessed"] = True
+    with open("files.json", "w") as file:
+        file.write(str(json.dumps(test)))
+        file.close()
