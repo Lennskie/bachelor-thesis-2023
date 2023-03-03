@@ -24,3 +24,4 @@ Add to the README:
 
 Add to the code:
 - A way for the user to see their files & if they are accessed in a remote / better way
+- A way for the user to add a custom path
