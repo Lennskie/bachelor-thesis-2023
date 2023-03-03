@@ -12,6 +12,15 @@ This project has been made it Python 3.10 and will only work in versions matchin
 It will ask for a filename and extension.
 Do **not** add a dot to the extension, this happens automatically
 
+Example params:
+filename: test
+extension: txt
+path: C:/users/user/Desktop
+
+> This will create C:/users/user/Desktop/test.txt
+>
+> These files **cannot** be moved without breaking the code, so please select the correct folder on your first set-up.
+
 The default will be "passwords.txt", if nothing is supplied.
 
 # Current support of file types

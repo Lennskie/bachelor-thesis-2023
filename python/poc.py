@@ -10,9 +10,13 @@ extension = input("Enter the extension of the file (without the dot) \nDefault i
 if(extension == ""): #Check if a default extension is needed
     extension="txt"
 
+path = input("Enter the path of the file \nDefault is the current directory if no path is entered:")
+if(path == ""): #Check if a default path is needed
+    path=""
+
 # Check what kind of file it is an if a write function is possible
 match extension:
     case 'txt':
-        txt_function(filename, extension)
+        txt_function(filename, extension, path)
     case _:
-        make_file_default(filename, extension)
+        make_file_default(filename, extension, path)
