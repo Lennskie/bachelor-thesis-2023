@@ -29,14 +29,11 @@ These files can have custom text in them, so they don't appear as 0kb files.
 - `.txt`
 
 # Flow
-poc   ->   make_files  ->  access_checker -> make_json
-
-↳ txt_helper ⮥   
+![](flow.png)
 
 # TODO
 Add to the README:
 - Show how a python file can forever be ran on Linux
-- Better showcase of the flow
 
 Add to the code:
 - A way for the user to see their files & if they are accessed in a remote / better way

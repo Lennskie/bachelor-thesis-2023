@@ -7,14 +7,9 @@ document.addEventListener('DOMContentLoaded', init);
 function init()
 {
     addList();
-    let buttons = document.querySelectorAll('button')
-    buttons.forEach(button => { button.addEventListener('click', () => { 
-        console.log(button.dataset.uuid) 
-    }) });    
 }
 
 function addList(){
-    // read from files.json which is in the root directory and select the first element
     fetch('../files.json')
     .then(response => response.json())
     .then(data => {
@@ -25,8 +20,8 @@ function addList(){
             const button = document.createElement('button');
             button.setAttribute('data-uuid', data[i].uuid);
             button.textContent = 'remove entry';
-            button.addEventListener('click', () => { 
-                console.log(button.dataset.uuid) 
+            button.addEventListener('click', () => {
+                removeEntry(data[i].uuid)
             });
             listItem.appendChild(button);
             const ul = document.querySelector('ul');
@@ -35,4 +30,6 @@ function addList(){
     });
 }
 
-
+function removeEntry(uuid){
+    console.log(uuid);
+}
