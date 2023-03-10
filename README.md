@@ -10,10 +10,6 @@ This project has been made it Python 3.10 and will only work in versions matchin
 
 `python poc.py`
 
-or
-
-`python poc.py test txt c:/users/user/Desktop/`
-
 It will ask for a filename, extension and path in the console.
 Do **not** add a dot to the extension, this happens automatically
 
@@ -33,7 +29,10 @@ The default will be "passwords.txt" in the root folder, if nothing is supplied.
 
 The command mentioned above is used when you will leave the terminal open. To do this in a way you can close the terminals and have multiple files that are listened to you can use the following command:
 
-`nohup python poc.py test txt c:/users/user/Desktop &`
+`start python poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
+
+>[! important]
+>start is a Windows command!
 
 This will create a test.txt file in the specified folder and will keep the listener up untill the file is accessed.
 
@@ -45,9 +44,8 @@ These files can have custom text in them, so they don't appear as 0kb files.
 ![](flow.png)
 
 # TODO
-Add to the README:
-- Show how a python file can forever be ran on Linux
 
 Add to the code:
 - Make the button actually remove the entry on the website and even in the JSON if possible.
-- Listen to params for nohup
+- Make the program fail if a param is missing
+- Have the param function write to JSON
