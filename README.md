@@ -29,10 +29,19 @@ The default will be "passwords.txt" in the root folder, if nothing is supplied.
 
 The command mentioned above is used when you will leave the terminal open. To do this in a way you can close the terminals and have multiple files that are listened to you can use the following command:
 
-`start python poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
+## Windows
 
->[! important]
->start is a Windows command!
+`start python python/poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
+
+>If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
+
+This will create a test.txt file in the specified folder and will keep the listener up untill the file is accessed.
+
+## Linux
+
+`nohop python python/poc_with_params.py -f test -e txt -p /home/ &`
+
+>If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
 
 This will create a test.txt file in the specified folder and will keep the listener up untill the file is accessed.
 
