@@ -36,6 +36,5 @@ Add to the README:
 - Show how a python file can forever be ran on Linux
 
 Add to the code:
-- A way for the user to see their files & if they are accessed in a remote / better way
 - Make listeners so you can add more files and see which one changed.
-- Make working event listeners in the javascript code
+- Make the button actually remove the entry on the website and even in the JSON if possible.
