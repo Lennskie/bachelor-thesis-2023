@@ -1,4 +1,4 @@
-from make_files import *
+from make_files import make_file_default
 
 # Make this file so params are supported when launching this python file from the terminal
 
@@ -16,10 +16,9 @@ def main(argv):
         elif opt in ("-f"):
             filename = arg
         elif opt in ("-e"):
-            extension = arg
+            extension = arg         
         elif opt in ("-p"):
-             path = arg
-
+            path = arg
 
     make_file_default(filename, extension, path)
 

@@ -57,4 +57,3 @@ These files can have custom text in them, so they don't appear as 0kb files.
 Add to the code:
 - Make the button actually remove the entry on the website and even in the JSON if possible.
 - Make the program fail if a param is missing
-- Have the param function write to JSON
