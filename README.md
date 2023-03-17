@@ -8,7 +8,7 @@ This project has been made it Python 3.10 and will only work in versions matchin
 
 # How to use for 1 file and params
 
-`python poc.py`
+`python3 poc.py`
 
 It will ask for a filename, extension and path in the console.
 Do **not** add a dot to the extension, this happens automatically
@@ -27,11 +27,11 @@ The default will be "passwords.txt" in the root folder, if nothing is supplied.
 
 # How to use for multiple files
 
-The command mentioned above is used when you will leave the terminal open. To do this in a way you can close the terminals and have multiple files that are listened to you can use the following command:
+If you want to have multiple listeners and files for honeytokens it is recommended you use either of the following commands. If you don't correctly fill in the parameters the program will not work properly, so it is best to properly read the documentation.
 
 ## Windows
 
-`start python python/poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
+`start python3 python/poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
 
 >If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
 
@@ -39,7 +39,7 @@ This will create a test.txt file in the specified folder and will keep the liste
 
 ## Linux
 
-`nohop python python/poc_with_params.py -f test -e txt -p /home/ &`
+`nohop python3 python/poc_with_params.py -f test -e txt -p /home/ &`
 
 >If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
 
@@ -57,3 +57,4 @@ These files can have custom text in them, so they don't appear as 0kb files.
 Add to the code:
 - Make the button actually remove the entry on the website and even in the JSON if possible.
 - Make the program fail if a param is missing
+- User chooses the sleep option
