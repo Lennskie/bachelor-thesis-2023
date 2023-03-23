@@ -11,7 +11,7 @@ def main(argv):
     opts, args = getopt.getopt(argv,"hf:e:p:")
     for opt, arg in opts:
         if opt == '-h':
-            print ('test.py -f <filename> -e <extension> -p <path>')
+            print ('poc_with_params.py -f <filename> -e <extension> -p <path>')
             sys.exit()
         elif opt in ("-f"):
             filename = arg
