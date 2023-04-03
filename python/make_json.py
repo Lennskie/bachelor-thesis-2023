@@ -1,5 +1,6 @@
 import json
 import os
+import win32api
 
 def make_json(filename, last_access_time, _uuid):
 
@@ -17,7 +18,8 @@ def make_json(filename, last_access_time, _uuid):
                     "uuid": _uuid,
                     "path": filename,
                     "access_date": last_access_time,
-                    "accessed": False
+                    "accessed": False,
+                    "by" : win32api.GetUserName()
                 }
             }
 
@@ -43,6 +45,7 @@ def update_json(_uuid):
         for i in range(len(_json)):
             if(_json[str(i)]["uuid"] == _uuid):
                 _json[str(i)]["accessed"] = True
+                _json[str(i)]["by"] = win32api.GetUserName()
         with open("files.json", "w") as file: # reopen in write mode
             file.write(str(json.dumps(_json)))
             file.close()

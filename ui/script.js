@@ -16,7 +16,7 @@ function addList(){
         const dataArray = Object.values(data); // convert object to array
         for(let i = 0; i < dataArray.length; i++) {
             const listItem = document.createElement('li');
-            listItem.innerHTML = `Dir: ${data[i].path} ; last opened at: ${data[i].last_access_time} & opened_status: ${data[i].accessed} `;
+            listItem.innerHTML = `Dir: ${data[i].path} ; last opened at: ${data[i].last_access_time} & opened_status: ${data[i].accessed}. Person accessed: ${data[i].by} `;
             const button = document.createElement('button');
             button.setAttribute('data-uuid', data[i].uuid);
             button.textContent = 'remove entry';

@@ -1,5 +1,5 @@
 from make_files import make_file_default
-from txt_helper import txt_function
+from txt_helper import txt_function_param
 
 # Make this file so params are supported when launching this python file from the terminal
 
@@ -22,7 +22,7 @@ def main(argv):
             path = arg
 
     if(extension == "txt"):
-        txt_function(filename, extension, path)
+        txt_function_param(filename, extension, path)
     else:
         make_file_default(filename, extension, path)
 

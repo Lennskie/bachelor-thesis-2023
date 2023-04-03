@@ -6,6 +6,8 @@ Ideally, you want to name it something the hacker might want to access like 'pas
 
 This project has been made it Python 3.10 and will only work in versions matching or higher, because the `match` function has only been introduced in 3.10.
 
+For Windows, you'll need to install `pypiwin32` with pip.
+
 # How to use for 1 file and params
 
 `python3 poc.py`
