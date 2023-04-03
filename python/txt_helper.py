@@ -6,3 +6,7 @@ def txt_function(filename, extension, path):
     if(user_input == ""):
         user_input = str(random.randint(1,1000) + random.randint(1,1000) + random.randint(1,1000))
     make_file_txt(filename, extension, path, user_input)
+
+def txt_function_param(filename, extension, path):
+    user_input = str(random.randint(1,1000) + random.randint(1,1000) + random.randint(1,1000))
+    make_file_txt(filename, extension, path, user_input)
