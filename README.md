@@ -60,3 +60,4 @@ Add to the code:
 - Make the button actually remove the entry on the website and even in the JSON if possible.
 - Make the program fail if a param is missing
 - User chooses the sleep option
+- Use another API to check the user who last accessed a file since win32api can't do that.
