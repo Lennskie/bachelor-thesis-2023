@@ -54,6 +54,17 @@ These files can have custom text in them, so they don't appear as 0kb files.
 # Flow
 ![](flow.png)
 
+# Common problems
+Your files might not be audited out of the box. The fix is:
+Make sure that auditing is enabled for file access events in the Windows security policy. You can do this by following these steps:
+1. Open the Local Security Policy editor (secpol.msc).
+2. Navigate to Security Settings > Advanced Audit Policy Configuration > Audit Policies > Object Access.
+3. Enable the "Audit File System" policy, and configure it to audit "Success" events.
+4. Click Apply and OK to save the changes.
+Try accessing the file as a different user, and then check the event log to see if the correct user name is logged.
+
+*Don't forget to force the policy after it has been changed with `gpupdate /force`*
+
 # TODO
 
 Add to the code:
