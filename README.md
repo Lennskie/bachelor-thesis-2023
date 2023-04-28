@@ -35,8 +35,6 @@ The default will be "passwords.txt" in the root folder, if nothing is supplied.
 
 If you want to have multiple listeners and files for honeytokens it is recommended you use the following command. If you don't correctly fill in the parameters the program will not work properly, so it is best to properly read the documentation.
 
-## Windows
-
 `start python3 python/poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
 
 >If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
