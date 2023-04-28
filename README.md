@@ -6,7 +6,7 @@ Ideally, you want to name it something the hacker might want to access like 'pas
 
 This project has been made it Python 3.10 and will only work in versions matching or higher, because the `match` function has only been introduced in 3.10.
 
-For Windows, you'll need to install `pypiwin32` with pip.
+This POC is written for Windows and you'll need to install `pypiwin32` with pip.
 
 # How to use for 1 file and params
 
@@ -29,19 +29,11 @@ The default will be "passwords.txt" in the root folder, if nothing is supplied.
 
 # How to use for multiple files
 
-If you want to have multiple listeners and files for honeytokens it is recommended you use either of the following commands. If you don't correctly fill in the parameters the program will not work properly, so it is best to properly read the documentation.
+If you want to have multiple listeners and files for honeytokens it is recommended you use the following command. If you don't correctly fill in the parameters the program will not work properly, so it is best to properly read the documentation.
 
 ## Windows
 
 `start python3 python/poc_with_params.py -f test -e txt -p c:/users/user/Desktop/ &`
-
->If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
-
-This will create a test.txt file in the specified folder and will keep the listener up untill the file is accessed.
-
-## Linux
-
-`nohop python3 python/poc_with_params.py -f test -e txt -p /home/ &`
 
 >If you want this to work properly, you'll have to be in the root folder of this project and do the above command from there. Otherwise the JSON file will be made in the wrong folder and nothing will work
 
@@ -64,11 +56,3 @@ Make sure that auditing is enabled for file access events in the Windows securit
 Try accessing the file as a different user, and then check the event log to see if the correct user name is logged.
 
 *Don't forget to force the policy after it has been changed with `gpupdate /force`*
-
-# TODO
-
-Add to the code:
-- Make the button actually remove the entry on the website and even in the JSON if possible.
-- Make the program fail if a param is missing
-- User chooses the sleep option
-- Use another API to check the user who last accessed a file since win32api can't do that.
