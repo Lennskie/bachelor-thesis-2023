@@ -1,5 +1,5 @@
 # Introduction
-This repo is made for my Bachelor Thesis of 2023.
+This repo is made for my Bachelor Thesis of 2023 at Howest Bruges.
 This tool lets you create a new file that will have a listener on it to check if it has been accessed by someone.
 
 Ideally, you want to name it something the hacker might want to access like 'passwords.txt' (this is the default name, explained below).
