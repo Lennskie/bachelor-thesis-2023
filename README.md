@@ -9,7 +9,7 @@ This project has been made it Python 3.10 and will only work in versions matchin
 This POC is written for Windows and you'll need to install `pypiwin32` with pip.
 
 # Important
-Make sure to run this POC as an **ADMIN** because pyiwin32 needs Admin rights to work properly.
+Make sure to run this POC as an **ADMIN** because pypiwin32 needs Admin rights to work properly.
 See "Common problems" as the bottom for more information.
 
 # How to use for 1 file and params
